@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Información de la empresa Meta: misión, visión, valores, etc.">
+    <title>Info - FNAF EDUCATIONAL</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="icon" href="Diseñosfreddy/logooficial.png" type="image/png"> <!-- Espacio para el icono -->
+</head>
+<body>
+    <img src="Diseñosfreddy/logooficial.png" alt="Logo de Wolf Tech GT" style="height: 80px; vertical-align: middle; padding-left: 30px;padding-top: 10px;">
+<header style="padding-top: 0%;">
+    <h1 style="display: inline-block; vertical-align: middle;">Freddy's Educational Pizzeria</h1>
+</header>
+
+
+
+<div class="menu-container">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Info.html">Información</a>
+        <a href="Servicios.html">Servicios</a>
+        <a href="index.html#ofertas">Pedidos</a>
+        <a href="index.html#inventario">Trabajos</a>
+        <a href="Contacto.html">Contacto</a>
+    </nav>
+</div>
+
+    <div class="hero-section">
+        <div class="hero-image hero-image-1"></div>
+        <div class="hero-image hero-image-2"></div>
+    </div>
+
+    <div class="container">
+        <section class="about-section">
+            <h2>Acerca de nosotros</h2>
+            <p>Nos especializamos en la formación integral de los niños a través de nuestra innovadora plataforma educativa, Freddy's Educational Pizzeria. Este entorno lúdico y recreativo está diseñado para promover el aprendizaje de disciplinas fundamentales como la comunicación y el lenguaje, el inglés y las matemáticas. A medida que los pequeños avanzan en cada nivel, se enfrentan a nuevos desafíos que ponen a prueba y refuerzan sus conocimientos adquiridos.</p>
+            <p>Reconocemos la crucial importancia de la educación en el desarrollo de los más jóvenes. Por ello, hemos creado una plataforma que se adapta a las necesidades de la infancia en esta era tecnológica. Al igual que las máquinas y herramientas evolucionan constantemente, nuestra misión es asegurar que los niños se mantengan a la vanguardia, desarrollándose y creciendo junto a los avances de la sociedad.</p>
+            <p>Con Freddy's Educational Pizzeria, transformamos el aprendizaje en una experiencia divertida y enriquecedora, donde cada juego se convierte en una oportunidad para explorar y descubrir el mundo que les rodea. Creemos que la educación debe ser un viaje emocionante, y estamos comprometidos a que cada niño no solo aprenda, sino que también disfrute del proceso de aprendizaje.</p>
+        </section>
+
+        <section class="mission-section">
+            <h2>Misión</h2>
+            <p>Ofrecer un video juego de educación abierta, libre y dinámica. Ampliar con actividades didácticas y divertidas las oportunidades de la enseñanza para un pensamiento abierto. Compartiremos información y material que permite un aprendizaje activo y creativo. FREDDY´S EDUCATIONAL PIZZERIA fue creado para apoyar a educadores, responsables sociales y profesionales a utilizar el juego como herramienta educativa, formativa y motivadora. Buscaremos recuperar la importancia del juego como herramienta de transformación social y personal. Apoyamos y colaboramos con los docentes y maestros para que juntos, podamos recuperar el valor del juego en sus acciones y actividades y procesos de trabajo y enseñanza. </p>
+        </section>
+
+        <section class="vision-section" style="padding-block-end: 35%;">
+            <h2>Visión</h2>
+            <p>FREDDY´S EDUCATIONAL PIZZERIA está orientando en convertir el sector de trasformación social y profesional por medio del juego, potenciando valores educativos y sociales a todos los ámbitos de la sociedad. Queremos también sensibilizar a la sociedad sobre la importancia del juego en los años, para reconocerlo como una herramienta de mejora y formación personal. Buscamos ser los responsables de reconocer y utilizar el juego como medio de transformación y concienciación social. Establecer un sistema innovador y creativo de información o comunicación en el área de razonamiento y pensamiento crítico por medio de juegos didácticos, talleres y proyectos en las materias principales. Proveer soporte y apoyo en el desarrollo educativo agregado al sistema de la educación pública e institucional. Finalmente movilizar y desarrollar el interés para identificar, analizar y resolver cualquier problema. El objetivo es aprender de una manera educativa los diferentes temas en las áreas básicas como Matemática, Lenguaje e inglés, desarrollando habilidades y aprendizajes significativos a través del video juego educativo.</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="social-icons">
+            <img src="Diseñosfreddy/Insta.png" alt="Instagram" class="social-icon">
+        </a>
+            <img src="Diseñosfreddy/Whats.png" alt="WhatsApp" class="social-icon">
+        </a>
+        </div>
+        <p>Tel: 5790-6170</p>
+        <p>&copy; 2024 Freddy's Educational Pizzeria</p>
+    </footer>
+
+    <button class="toggle-button" onclick="toggleDarkMode()" aria-label="Toggle dark mode">Modo Oscuro</button>
+
+    <script>
+        /* JavaScript para el efecto de scroll en la sección hero y el modo oscuro */
+
+// Efecto de scroll en la sección hero
+window.addEventListener('scroll', function() {
+    const scrollY = window.scrollY;
+    const heroImages = document.querySelectorAll('.hero-image');
+
+    heroImages.forEach((image, index) => {
+        const translateY = scrollY / 2;
+        image.style.transform = `translateY(${translateY}px)`;
+
+        const opacity = 1 - (scrollY / (index + 1) / 500);
+        image.style.opacity = opacity;
+    });
+});
+
+// Función para cambiar el modo oscuro
+function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+}
+
+// Aplicar el modo guardado al cargar la página
+function applySavedMode() {
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'enabled') {
+        document.body.classList.add('dark-mode');
+    }
+}
+
+window.addEventListener('DOMContentLoaded', applySavedMode);
+
+    </script>
+</body>
+</html>

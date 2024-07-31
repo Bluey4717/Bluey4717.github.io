@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informatica Wolf Tech GT ofrece soluciones tecnológicas innovadoras incluyendo desarrollo de software, soporte técnico, y consultoría en IT.">
+    <title>FNAF EDUCATIONAL</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Diseñosfreddy/logooficial.png" type="image/png"> <!-- Espacio para el icono -->
+</head>
+<body>
+    <img src="Diseñosfreddy/logooficial.png" alt="Logo de Wolf Tech GT" style="height: 90px; vertical-align: middle; padding-left: 40px;padding-top: 50px;">
+<header style="padding-top: 0%;">
+    <h1 style="display: inline-block; vertical-align: middle;">Freddy's Educational Pizzeria</h1>
+</header>
+<div class="menu-container">
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="Info.html">Información</a>
+        <a href="Servicios.html">Servicios</a>
+        <a href="index.html#ofertas">Pedidos</a>
+        <a href="index.html#inventario">Trabajos</a>
+        <a href="Contacto.html">Contacto</a>
+    </nav>
+</div>
+<button class="toggle-button" onclick="toggleDarkMode()" aria-label="Toggle dark mode">Modo Oscuro</button>
+
+<div class="container" id="inicio">
+    <section id="informacion" class="section">
+        <h2>Acerca de nosotros</h2>
+        <img src="Diseñosfreddy/logo.png" 
+            style="width: 50%;height:10%;float: right;margin-left: 10px;clear: both; padding-top: 0%;">
+        <div class="card">
+            <p>¡Descubre la revolución del aprendizaje con nuestra innovadora plataforma educativa! En nuestra empresa, nos dedicamos a proporcionar servicios que combinan diversión y conocimiento, creando un espacio donde aprender se convierte en una experiencia emocionante. Nuestro objetivo es facilitar, enriquecer y transformar el aprendizaje de los más pequeños, brindándoles herramientas y recursos que harán de su educación un viaje inolvidable. ¡Únete a nosotros y dale a tus hijos la oportunidad de aprender jugando! 
+            </p>
+            <a href="Info.html"><button class="read-more-button">Ver más...</button></a>
+        </div>
+    </section>
+    
+    
+
+    <section id="servicios" class="section fade-in">
+        <h2 style="text-align: center;">Nuestros servicios</h2>
+        <div class="services-container">
+            <a class="service-card" href="Servicios.html#1">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#2">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#3">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#4">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#5">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#6">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#7">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#8">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#9">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#10">
+                <div class="service-content">
+                </div>
+            </a>
+            <a class="service-card" href="Servicios.html#11">
+                <div class="service-content">
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section id="imagen-seccion" class="section fade-in">
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="Diseñosfreddy/primera.png" alt="Primera imagen" class="carousel-image">
+                <img src="Diseñosfreddy/segunda.png" alt="Segunda imagen" class="carousel-image">
+                <img src="Diseñosfreddy/tercera.png" alt="Tercera imagen" class="carousel-image">
+            </div>
+        </div>
+    </section> 
+    
+    <section id="ofertas" class="section fade-in">
+        <h2 style="text-align: center;">Pedidos</h2>
+        <div class="card1">
+            <img src="Diseñosfreddy/Off.png" alt="No hay ofertas actualmente" style="width: 50%;">
+            <h3>Ups, no tenemos ninguno, esperamos el tuyo</h3>
+        </div>
+    </section>
+
+    <section id="inventario" class="section fade-in">
+        <h2 style="text-align: center;">Pltaformas en venta</h2>
+        <div class="card">
+            <p>Próximamente...</p>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <div class="social-icons">
+        <img src="Diseñosfreddy/Insta.png" alt="Instagram" class="social-icon">
+    </a>
+        <img src="Diseñosfreddy/Whats.png" alt="WhatsApp" class="social-icon">
+    </a>
+    </div>
+    <p>Tel: 5790-6170</p>
+    <p>&copy; 2024 Freddy's Educational Pizzeria</p>
+</footer>
+
+<script>
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        const isDarkMode = document.body.classList.contains('dark-mode');
+        localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+    }
+
+    function applySavedMode() {
+        const savedMode = localStorage.getItem('darkMode');
+        if (savedMode === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    }
+
+    window.addEventListener('DOMContentLoaded', applySavedMode);
+
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('header');
+        var nav = document.querySelector('nav');
+
+        if (window.pageYOffset > header.clientHeight) {
+            nav.style.position = 'fixed';
+            nav.style.top = '0';
+            nav.style.width = '100%';
+        } else {
+            nav.style.position = 'relative';
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const carousel = document.querySelector('.carousel');
+        const images = document.querySelectorAll('.carousel-image');
+        let index = 0;
+        const imageCount = images.length;
+        const delay = 3000; // Tiempo en milisegundos que se detiene en cada imagen
+
+        function changeImage() {
+            index = (index + 1) % imageCount;
+            carousel.style.transform = `translateX(${-index * 100 / imageCount}%)`;
+        }
+
+        setInterval(changeImage, delay);
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const fadeIns = document.querySelectorAll('.fade-in');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        });
+
+        fadeIns.forEach(fadeIn => {
+            observer.observe(fadeIn);
+        });
+    });
+</script>
+</body>
+</html>
